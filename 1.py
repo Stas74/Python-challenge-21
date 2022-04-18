@@ -56,6 +56,7 @@ print((van_edm_price + edm_lon_price) / (van_edm_travel_time + edm_layover + edm
 print((van_cal_price + cal_lon_price) / (van_cal_travel_time + cal_layover + cal_lon_travel_time)) #117.03
 
 
+
 # 85.51724137931035
 # 98.78787878787878
 # 110.0
