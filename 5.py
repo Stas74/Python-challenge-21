@@ -48,5 +48,11 @@ landmarks = {
 
 keys = list(landmarks.keys())
 values = list(landmarks.values())
-print(keys, values)
+# print(keys, values)
+# print(keys)
 
+landmark = []
+for i in keys:
+    if landmarks[i] < 15:
+        landmark.append(i)
+print(landmark, len(landmark))
