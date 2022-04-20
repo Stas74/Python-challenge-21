@@ -46,3 +46,7 @@ landmarks = {
     "The View from The Shard": 14
 }
 
+keys = list(landmarks.keys())
+values = list(landmarks.values())
+print(keys, values)
+
