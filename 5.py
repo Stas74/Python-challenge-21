@@ -15,6 +15,17 @@
 # >>> for v in d.values():
 # ...     print(v)
 
+# -------------------
+# the Pythonic way to iterate through a dictionary accessing both the keys and values looks like this:
+# >>> d = {'foo': 1, 'bar': 2, 'baz': 3}
+# >>> for k, v in d.items():
+# ...     print('k =', k, ', v =', v)
+# ...
+# k = foo , v = 1
+# k = bar , v = 2
+# k = baz , v = 3
+
+
 # Challenge
 # Dot wants to visit all the London landmarks where the wait time is less than 15 minutes. We have a dictionary called landmarks, within which landmark names are keys and wait times are their respective values.
 
