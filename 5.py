@@ -58,3 +58,17 @@ for i in keys:
 print(landmark, len(landmark))
 
 # ['Big Ben', 'London Transport Museum', 'Wembley Stadium', 'Hyde Park', 'The View from The Shard'] 5
+
+# SOLUTION
+
+keys = list(landmarks.keys())
+values = list(landmarks.values())
+
+
+res = []
+for i in range(len(keys)):
+    if values[i] < 15:
+        res.append(keys[i])
+res
+len(res)
+
