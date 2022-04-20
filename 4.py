@@ -1,4 +1,8 @@
+#  Dictionaries in Python
+# https://realpython.com/python-dicts/
+
 # Challenge
+
 # Dot doesn't travel to Europe often, so they decide to take the most expensive option for each course as well as drink. Create a new dictionary called meals that will contain the names of the courses as the keys (starters, mains...), and the name of the food or drink item as the values.
 
 # After assembling the dictionary appropriately, when Dot gives a 10% tip on this meal, how much will the tip come out to?
@@ -43,3 +47,16 @@ values = list(beers.values())
 print(keys)
 print(values)
 print(starters["Salami Platter"])
+
+
+meals = {
+    "starters": "Salami Platter",
+    "mains": "Braised Beef Short Ribs",
+    "desserts": "Chilled Chocolate Fondant",
+    "beers": "Kong Ludwig Weissbier"
+}
+
+total = starters["Salami Platter"] + mains["Braised Beef Short Ribs"] + desserts["Chilled Chocolate Fondant"] + beers["Kong Ludwig Weissbier"]
+print(total)
+tips = total * 0.1
+print(tips)
