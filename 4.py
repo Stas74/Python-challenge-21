@@ -38,3 +38,8 @@ beers = {
 
 # if you want to see the keys of the dictionary in the list: keys = list(starters.keys())
 # if you want to see the keys of the dictionary in the list: values = list(starters.values())
+keys = list(beers.keys())
+values = list(beers.values())
+print(keys)
+print(values)
+print(starters["Salami Platter"])
