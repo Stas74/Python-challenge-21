@@ -56,3 +56,5 @@ for i in keys:
     if landmarks[i] < 15:
         landmark.append(i)
 print(landmark, len(landmark))
+
+# ['Big Ben', 'London Transport Museum', 'Wembley Stadium', 'Hyde Park', 'The View from The Shard'] 5
