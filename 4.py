@@ -60,3 +60,33 @@ total = starters["Salami Platter"] + mains["Braised Beef Short Ribs"] + desserts
 print(total)
 tips = total * 0.1
 print(tips)
+
+
+# SOLUTION
+
+starter_keys = list(starters.keys())
+starter_keys
+
+mains_keys = list(mains.keys())
+mains_keys
+
+desserts_keys = list(desserts.keys())
+desserts_keys
+
+beers_keys = list(beers.keys())
+beers_keys
+
+meals = {
+}
+
+meals["starters"] = starter_keys[1]
+meals["mains"] = mains_keys[0]
+meals["desserts"] = desserts_keys[0]
+meals["beers"] = beers_keys[2]
+
+meals
+
+(starters[meals['starters']] +
+ mains[meals['mains']] +
+ desserts[meals['desserts']] +
+ beers[meals['beers']]) * 0.1
