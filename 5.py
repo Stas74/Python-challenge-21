@@ -3,6 +3,18 @@
 # Python "for" Loops (Definite Iteration):  https://realpython.com/python-for-loop/
 # Conditional Statements in Python:  https://realpython.com/python-conditional-statements/
 
+# >>> d = {'foo': 1, 'bar': 2, 'baz': 3}
+# >>> for k in d:
+# ...     print(k)
+
+# You can make a dictionary reference using the key as usual
+# >>> for k in d:
+# ...     print(d[k])
+
+# You can also iterate through a dictionary’s values directly by using .values():
+# >>> for v in d.values():
+# ...     print(v)
+
 # Challenge
 # Dot wants to visit all the London landmarks where the wait time is less than 15 minutes. We have a dictionary called landmarks, within which landmark names are keys and wait times are their respective values.
 
