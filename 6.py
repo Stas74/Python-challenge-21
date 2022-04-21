@@ -45,6 +45,16 @@
 # Input
 def find_the_gate(spots, vehicle):
     # Code here!
+    letter = vehicle[0].capitalize()
+    # print(letter)
+    counter = 0
+    for i in range(len(spots)):        
+        if letter == spots[i]:
+            return counter
+        counter += 1
+    return False
+        
+    # print(spots[i])
 
 
 print(find_the_gate(
