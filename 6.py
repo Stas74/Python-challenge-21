@@ -81,3 +81,16 @@ print(find_the_gate(
 ))
 
 # 15
+
+
+# SOLUTION
+
+def find_the_gate(_list, plane):
+    for i in range(len(_list)):
+        if plane == "wide":
+            if _list[i] == 'W':
+                return i
+        else:
+            if (_list[i] == 'N') or (_list[i] == 'W'):
+                return i
+    return False
