@@ -79,3 +79,5 @@ print(find_the_gate(
 print(find_the_gate(
   ['w','n','n','w','N','n','w','N','N','w','n','n','w','n','n','W','W','W','W','n','n','w','n','n'], 'wide'
 ))
+
+# 15
