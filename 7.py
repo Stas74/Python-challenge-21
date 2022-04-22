@@ -35,7 +35,7 @@
 # series.mode()   #outputs mode value in Pandas Series
 
 
-To read more on descriptive statistics, read this [article](https://realpython.com/python-statistics/#getting-started-with-python-statistics-libraries).
+# To read more on descriptive statistics, read this [article](https://realpython.com/python-statistics/#getting-started-with-python-statistics-libraries).
 
 # To learn more about the various Pandas functions, check out the user guide in the 
 # [pandas documentation](https://pandas.pydata.org/docs/user_guide/index.html#user-guide).
@@ -47,3 +47,18 @@ To read more on descriptive statistics, read this [article](https://realpython.c
 # you may find yourself looking up the documentation of a particular function or plugin you use. 
 # Don't worry if there are a few functions you don't know by heart. 
 # There are just too many to know! An essential skill is to learn how to navigate documentation and understand how to apply the examples to your work.
+
+import pandas as pd
+df = pd.read_csv('fc_barcelona.csv')
+df.head()
+points = df.Pts
+games_played = df.MP
+wins = df.W
+losses = df.L
+attendance = df.Attendance.dropna() # skipping missing values (NaN) because there were no fans during 2020-2021 season because of COVID
+
+print(games_played.max()) # What is the maximum amount of games Barcelona playes in 1 season?
+print(attendance.mean()) # What is the average attendance across the seasons?
+print(wins.median() - losses.median()) # What is the difference between median value of wins and losses?
+print(wins.min()) # What is the minimum number of games Barcelona managed to win in 1 season?
+print(points.max() - points.min()) # What is the difference between max and min amount of points Barcelona was able to get in all seasons?
