@@ -141,3 +141,11 @@ df.head()
 # 2	Basilica of the Sacre-Coeur	      15	10
 # 3	Les Invalides (Army Museum)	      15	8
 # 4	Notre Dame	                       0	0
+
+# What is the most expensive landmark in Paris?
+df.sort_values(by="price",ascending=False) 
+# 1	Eiffel Tower	40	30
+
+# What is the average wait time for all landmarks?
+df['queue_time'].mean()
+# 9.705882352941176
