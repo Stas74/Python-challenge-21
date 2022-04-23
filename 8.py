@@ -149,3 +149,13 @@ df.sort_values(by="price",ascending=False)
 # What is the average wait time for all landmarks?
 df['queue_time'].mean()
 # 9.705882352941176
+
+
+# We can combine functions .iloc and .idxmax to find the row where the price is the highest. 
+# Average queue time can be found by using the function .mean on the right column.
+
+# SOLUTION
+
+df.iloc[df['price'].idxmax()]['landmark']
+
+df['queue_time'].mean()
