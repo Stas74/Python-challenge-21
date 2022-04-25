@@ -72,7 +72,11 @@
 
 import pandas as pd
 df = pd.read_csv('wine.csv')
-df.head()
+# df.head()
+filtered_df_alco = df[df['Alcohol'] <= 13]
+print(len(filtered_df_alco))
+filtered_df_class = df[df['Class'] == 3]
+print(len(filtered_df_class))
 
 # Stretch Questions
 
