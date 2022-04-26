@@ -47,10 +47,30 @@ https://realpython.com/pandas-groupby/
 To learn more about the various pandas functions, check out the user guide in the pandas documentation.
 https://pandas.pydata.org/docs/user_guide/index.html#user-guide
 
-import pandas as pd
-df = pd.read_csv('dubai_properties_data.csv')
-
-
+  
 # Challenge
 
 # Which neighborhood has the highest average property price and the highest size_in_sqft?
+
+import pandas as pd
+df = pd.read_csv('dubai_properties_data.csv')
+# df.groupby(['quality'])[['price','size_in_sqft','no_of_bedrooms']].mean()
+# df.groupby(['view_of_landmark','view_of_water'])[['price','no_of_bedrooms']].mean()
+
+df.head()
+# price
+# size_in_sqft
+
+fin = df.groupby(['neighborhood'])[['price']].mean()
+print((fin.sort_values(by='price', ascending=False)).head(1))
+
+#                       price
+# neighborhood               
+# Palm Jumeirah  4.379435e+06
+
+size = df.groupby(['neighborhood'])[['size_in_sqft']].mean()
+print((size.sort_values(by='size_in_sqft', ascending=False)).head(1))
+
+#                      size_in_sqft
+# neighborhood                     
+# Dubai Festival City        2778.4
