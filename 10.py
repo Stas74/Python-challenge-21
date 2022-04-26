@@ -74,3 +74,19 @@ print((size.sort_values(by='size_in_sqft', ascending=False)).head(1))
 #                      size_in_sqft
 # neighborhood                     
 # Dubai Festival City        2778.4
+
+
+# SOLUTION
+
+grouped = df.groupby('neighborhood')[['price','size_in_sqft']].mean()
+grouped.sort_values('price',ascending=False).head(1)
+
+#                      price	size_in_sqft
+# neighborhood		
+# Palm Jumeirah	4.379435e+06	2084.134831
+
+grouped.sort_values('size_in_sqft',ascending=False).head(1)
+
+#                        price	size_in_sqft
+# neighborhood		
+# Dubai Festival City	2445000.0	2778.4
