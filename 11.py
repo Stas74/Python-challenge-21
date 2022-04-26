@@ -36,4 +36,8 @@
 
 import pandas as pd
 df = pd.read_csv('dubai_properties_data.csv')
-df.head()
+# df.head()
+
+group = df.groupby(['neighborhood']).agg({'price' : ['max','min']})
+group['dif'] = group['price']['max'] - group['price']['min']
+group.sort_values('dif', ascending=False).head()
