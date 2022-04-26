@@ -41,3 +41,28 @@ df = pd.read_csv('dubai_properties_data.csv')
 group = df.groupby(['neighborhood']).agg({'price' : ['max','min']})
 group['dif'] = group['price']['max'] - group['price']['min']
 group.sort_values('dif', ascending=False).head()
+
+
+# SOLUTION
+
+grouped = df.groupby('neighborhood').agg({'price':['min','max']})
+grouped.head()
+
+# 	            price
+#               min	max
+# neighborhood		
+# Al Barari	  1307392	4500000
+# Al Barsha	  493314	778000
+# Al Furjan 	350000	1349999
+# Al Kifaf	  1359000	2100000
+# Al Quoz	    360000	360000
+
+(grouped.iloc[:,1] - grouped.iloc[:,0]).sort_values(ascending=False).head()
+
+# neighborhood
+# Palm Jumeirah               34375112
+# Business Bay                30470000
+# Jumeirah                    26300000
+# Downtown Dubai              18688888
+# Jumeirah Beach Residence    14110000
+# dtype: int64
