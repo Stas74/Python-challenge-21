@@ -43,3 +43,16 @@
 # We can see more examples of stack and unstack here (https://www.w3resource.com/pandas/dataframe/dataframe-stack.php) and
 # here (https://www.w3resource.com/pandas/dataframe/dataframe-unstack.php) respectively.
 
+# ------------------------
+# Challenge
+
+# Step I: Using the season column, filter the DataFrame so it contains only rows for summer and winter.
+
+# Step II:Using groupby() and unstack(), compute the difference between the average temperature in summer and winter(at 9am) for all locations.
+
+# Question: What is the difference between the average summer temperatures (using variable Temp9am) and 
+the average winter temperatures (using variable Temp9am) for Adelaide, Albany and Albury?
+
+import pandas as pd
+df = pd.read_csv('aus_weather.csv')
+df.head()
